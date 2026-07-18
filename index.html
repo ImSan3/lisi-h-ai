@@ -385,16 +385,30 @@ document.addEventListener('DOMContentLoaded',()=>{
   dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('dragover');});
   dz.addEventListener('dragleave',()=>dz.classList.remove('dragover'));
   dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f&&f.name.endsWith('.docx'))selectFile(f);else showToast('仅支持 .docx');});
-  // 只更新倒计时文字，不重建 DOM
+  // 只更新倒计时文字，绝不重建 DOM
   setInterval(() => {
     if (!document.getElementById('adminOverlay').classList.contains('show')) return;
-    const codes = getCodes();
     const timers = document.querySelectorAll('.cc-timer');
-    const display = codes.filter(c => c.status !== 'used' && c.status !== 'expired').slice(0, 3);
-    display.forEach((c, i) => {
-      if (timers[i] && c.status === 'assigned') {
-        timers[i].textContent = '⏱ ' + getTimeLeft(c);
-      }
+    const cards = document.querySelectorAll('.code-card');
+    cards.forEach((card, i) => {
+      const codeEl = card.querySelector('.cc-num');
+      if (!codeEl || !timers[i]) return;
+      const code = codeEl.textContent.replace(/\s/g, '');
+      try {
+        const codes = JSON.parse(localStorage.getItem('ycjg_codes_v3') || '[]');
+        const c = codes.find(x => x.code === code);
+        if (c && c.status === 'assigned' && c.assignedAt) {
+          const left = CODE_EXPIRE_MS - (Date.now() - c.assignedAt);
+          if (left <= 0) {
+            timers[i].textContent = '⏱ 已过期';
+            timers[i].style.color = 'var(--danger)';
+          } else {
+            const m = Math.floor(left / 60000);
+            const s = Math.floor((left % 60000) / 1000);
+            timers[i].textContent = `⏱ ${m}:${String(s).padStart(2, '0')}`;
+          }
+        }
+      } catch {}
     });
   }, 1000);
 });
