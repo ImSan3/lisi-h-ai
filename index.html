@@ -385,7 +385,18 @@ document.addEventListener('DOMContentLoaded',()=>{
   dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('dragover');});
   dz.addEventListener('dragleave',()=>dz.classList.remove('dragover'));
   dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('dragover');const f=e.dataTransfer.files[0];if(f&&f.name.endsWith('.docx'))selectFile(f);else showToast('仅支持 .docx');});
-  setInterval(()=>{if(document.getElementById('adminOverlay').classList.contains('show'))renderCodeCards();},1000);
+  // 只更新倒计时文字，不重建 DOM
+  setInterval(() => {
+    if (!document.getElementById('adminOverlay').classList.contains('show')) return;
+    const codes = getCodes();
+    const timers = document.querySelectorAll('.cc-timer');
+    const display = codes.filter(c => c.status !== 'used' && c.status !== 'expired').slice(0, 3);
+    display.forEach((c, i) => {
+      if (timers[i] && c.status === 'assigned') {
+        timers[i].textContent = '⏱ ' + getTimeLeft(c);
+      }
+    });
+  }, 1000);
 });
 
 function switchMode(m){if(m==='detect')return showToast('AI检测功能开发中');state.mode=m;state.lang='zh';state.platform='知网';state.model=null;document.querySelectorAll('.mode-card').forEach(c=>c.classList.toggle('active',c.dataset.mode===m));renderAll();document.querySelector('#langTags .tag[data-lang="zh"]').click();}
