@@ -4,7 +4,7 @@
 
 **专业学术文本改写工具 · 降重 · 降AI · 双降**
 
-[![GitHub Pages](https://img.shields.io/badge/在线访问-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://sannottired.github.io/lisi-h-ai/)
+[![GitHub Pages](https://img.shields.io/badge/在线访问-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://imsan3.github.io/lisi-h-ai/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 </div>
@@ -46,7 +46,7 @@ lisi-h-ai/
 
 ```bash
 # 克隆仓库
-git clone https://github.com/SannotTired/lisi-h-ai.git
+git clone https://github.com/ImSan3/lisi-h-ai.git
 
 # 直接用浏览器打开
 open lisi-h-ai/index.html
@@ -125,6 +125,6 @@ MIT License
 
 <div align="center">
 
-**Made with ❤️ by [LiSiH](https://github.com/SannotTired)**
+**Made with ❤️ by [LiSiH](https://github.com/ImSan3)**
 
 </div>

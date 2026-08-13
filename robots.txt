@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sannottired.github.io/lisi-h-ai/sitemap.xml
+Sitemap: https://imsan3.github.io/lisi-h-ai/sitemap.xml
