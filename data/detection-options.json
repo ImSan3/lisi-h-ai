@@ -1,0 +1,178 @@
+{
+ "code": 0,
+ "message": "success",
+ "data": {
+  "platforms": {
+   "zh": [
+    {
+     "task_platform": "知网_zh",
+     "task_name": "aigcmove_tp_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "维普_zh",
+     "task_name": "aimove_weipu_0513",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "格子达_zh",
+     "task_name": "gzd_0510",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "Paperyy_zh",
+     "task_name": "aigcmove_tp_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "笔杆网_zh",
+     "task_name": "aigcmove_tp_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "万方_zh",
+     "task_name": "paperpass",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "PaperPass_zh",
+     "task_name": "paperpass0618",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "华宸_zh",
+     "task_name": "aigcmove_tp_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "paperred_zh",
+     "task_name": "zhiwang",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "writepass_zh",
+     "task_name": "zhiwang",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "大雅_zh",
+     "task_name": "daya",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "朱雀_zh",
+     "task_name": "aimove_matrix_s_1",
+     "price_per_1k_words": 0.1
+    }
+   ],
+   "en": [
+    {
+     "task_platform": "Turnitin_en",
+     "task_name": "turnitin_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "ZeroGPT_en",
+     "task_name": "turnitin_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "GPTZero_en",
+     "task_name": "turnitin_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "Originality.ai_en",
+     "task_name": "turnitin_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "WinstonAI_en",
+     "task_name": "turnitin_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "Copyleaks_en",
+     "task_name": "turnitin_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "sapling.ai_en",
+     "task_name": "turnitin_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "Scribbr_en",
+     "task_name": "turnitin_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "undetectable.ai_en",
+     "task_name": "turnitin_s_1",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "知网_en",
+     "task_name": "aimove_weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "维普_en",
+     "task_name": "aimove_weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "格子达_en",
+     "task_name": "aimove_weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "Paperyy_en",
+     "task_name": "weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "笔杆网_en",
+     "task_name": "weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "万方_en",
+     "task_name": "weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "PaperPass_en",
+     "task_name": "weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "华宸_en",
+     "task_name": "aimove_weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "paperred_en",
+     "task_name": "weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "writepass_en",
+     "task_name": "weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "大雅_en",
+     "task_name": "weipu_english",
+     "price_per_1k_words": 0.1
+    },
+    {
+     "task_platform": "朱雀_en",
+     "task_name": "weipu_english",
+     "price_per_1k_words": 0.1
+    }
+   ],
+   "general": []
+  }
+ }
+}

@@ -1,0 +1,221 @@
+{
+ "success": true,
+ "presets": [
+  {
+   "code": "daya",
+   "name": "0729-大雅专用",
+   "description": "0729-大雅专用",
+   "price": 0.44
+  },
+  {
+   "code": "paperpass0618",
+   "name": "0618-PaperPass专用",
+   "description": "0618-PaperPass专用",
+   "price": 0.44
+  },
+  {
+   "code": "aimove_weipu_0520",
+   "name": "0520-格子达学校版专用",
+   "description": "0520-格子达学校版专用",
+   "price": 0.44
+  },
+  {
+   "code": "aimove_weipu_0513",
+   "name": "0513-维普专用",
+   "description": "0513-维普专用",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_micro_1",
+   "name": "降ai模式-微度模式1",
+   "description": "降ai模式-微度模式1",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_micro_2",
+   "name": "降ai模式-微度模式2",
+   "description": "降ai模式-微度模式2",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_micro_3",
+   "name": "降ai模式-微度模式3",
+   "description": "降ai模式-微度模式3",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_micro_4",
+   "name": "降ai模式-微度模式4",
+   "description": "降ai模式-微度模式4",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_micro_5",
+   "name": "降ai模式-微度模式5",
+   "description": "降ai模式-微度模式5",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_1",
+   "name": "AI移除_260112_1 (降AI能力一般，改写幅度小，学术性强，非一逗到底）",
+   "description": "AI移除_260112_1 (降AI能力一般，改写幅度小，学术性强，非一逗到底）",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_2",
+   "name": "AI移除_260112_2 (降AI能力一般，改写幅度小，学术性强，非一逗到底）",
+   "description": "AI移除_260112_2 (降AI能力一般，改写幅度小，学术性强，非一逗到底）",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_3",
+   "name": "AI移除_260112_3 (降AI能力强，改写幅度中，学术性中，非一逗到底）",
+   "description": "AI移除_260112_3 (降AI能力强，改写幅度中，学术性中，非一逗到底）",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_4",
+   "name": "AI移除_260112_4 (降AI能力强，改写幅度中，学术性中，非一逗到底）",
+   "description": "AI移除_260112_4 (降AI能力强，改写幅度中，学术性中，非一逗到底）",
+   "price": 0.44
+  },
+  {
+   "code": "gzd_0510",
+   "name": "0510-格子达个人版",
+   "description": "0510-格子达个人版",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_5",
+   "name": "AI移除_260112_5 (降AI能力很强，改写幅度大，学术性中，非一逗到底）",
+   "description": "AI移除_260112_5 (降AI能力很强，改写幅度大，学术性中，非一逗到底）",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_tp_s_merge_1",
+   "name": "降ai模式-混合模式",
+   "description": "降ai模式-混合模式",
+   "price": 0.44
+  },
+  {
+   "code": "zh_jc_1_0325",
+   "name": "降重测试模式0325-1",
+   "description": "降重测试模式0325-1",
+   "price": 0.44
+  },
+  {
+   "code": "zh_jc_2_0325",
+   "name": "降重测试模式0325-2",
+   "description": "降重测试模式0325-2",
+   "price": 0.44
+  },
+  {
+   "code": "zh_jc_3_0325",
+   "name": "降重测试模式0325-3",
+   "description": "降重测试模式0325-3",
+   "price": 0.44
+  },
+  {
+   "code": "zh_jc_4_0325",
+   "name": "降重测试模式0325-4",
+   "description": "降重测试模式0325-4",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_sj_s_3",
+   "name": "双降260112_3",
+   "description": "双降260112_3",
+   "price": 0.44
+  },
+  {
+   "code": "aimove_大雅句子_1",
+   "name": "AI移除_12.14_对大雅，YY降AI力度强",
+   "description": "AI移除_12.14_对大雅，YY降AI力度强",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_sj_s_2",
+   "name": "双降260112_2",
+   "description": "双降260112_2",
+   "price": 0.44
+  },
+  {
+   "code": "aimove_weipu_english",
+   "name": "降AI260430_en",
+   "description": "降AI260430_en",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_sj_s_1",
+   "name": "双降260112_1",
+   "description": "双降260112_1",
+   "price": 0.44
+  },
+  {
+   "code": "aimove_matrix_s_1",
+   "name": "AI移除_7.22(降小说新闻等泛娱乐模型)",
+   "description": "AI移除_7.22(降小说新闻等泛娱乐模型)",
+   "price": 0.44
+  },
+  {
+   "code": "turnitin_s_1",
+   "name": "turnitin260430",
+   "description": "turnitin260430",
+   "price": 0.44
+  },
+  {
+   "code": "jc_muti_language_1",
+   "name": "超级改写(扩写降重，改后字数增加20%-40%)",
+   "description": "超级改写(扩写降重，改后字数增加20%-40%)",
+   "price": 0.44
+  },
+  {
+   "code": "5.09en",
+   "name": "双降260206_en",
+   "description": "双降260206_en",
+   "price": 0.44
+  },
+  {
+   "code": "wanfang_0731",
+   "name": "0731-万方专用",
+   "description": "0731-万方专用",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_weipu_sj",
+   "name": "维普双降专用",
+   "description": "维普双降专用",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_wanfang_sj",
+   "name": "万方双降专用",
+   "description": "万方双降专用",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_daya_sj",
+   "name": "大雅双降专用",
+   "description": "大雅双降专用",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_zhuque_sj",
+   "name": "朱雀双降专用",
+   "description": "朱雀双降专用",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_paperpass_sj",
+   "name": "PaperPass双降专用",
+   "description": "PaperPass双降专用",
+   "price": 0.44
+  },
+  {
+   "code": "aigcmove_turnitin_sj",
+   "name": "英语双降_0826",
+   "description": "英语双降_0826",
+   "price": 0.44
+  }
+ ]
+}
