@@ -4,7 +4,7 @@
 
 **专业学术文本改写工具 · 降重 · 降AI · 双降**
 
-[![GitHub Pages](https://img.shields.io/badge/在线访问-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://imsan3.github.io/lisi-h-ai/)
+[![GitHub Pages](https://img.shields.io/badge/在线访问-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://imsan3.github.io/san-ai/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 </div>
@@ -35,7 +35,7 @@ San降AI 是一款专注于学术文本改写的轻量级工具，支持**降重
 ## 📁 项目结构
 
 ```
-lisi-h-ai/
+san-ai/
 ├── index.html          # 主页面（单文件，内联 CSS/JS）
 └── README.md
 ```
@@ -46,10 +46,10 @@ lisi-h-ai/
 
 ```bash
 # 克隆仓库
-git clone https://github.com/ImSan3/lisi-h-ai.git
+git clone https://github.com/ImSan3/san-ai.git
 
 # 直接用浏览器打开
-open lisi-h-ai/index.html
+open san-ai/index.html
 ```
 
 ### 部署到 GitHub Pages
@@ -60,7 +60,7 @@ open lisi-h-ai/index.html
 4. Branch 选择 `main`，文件夹选择 `/ (root)`
 5. 点击 Save，等待 1-2 分钟即可访问
 
-访问地址: `https://<你的用户名>.github.io/lisi-h-ai/`
+访问地址: `https://<你的用户名>.github.io/san-ai/`
 
 ## 📊 支持的模型
 
