@@ -65,6 +65,14 @@ body::after{content:'';position:fixed;bottom:-200px;right:-140px;width:620px;hei
 .hero-side{display:flex;flex-direction:row-reverse;align-items:center;gap:24px;flex:none}
 .video-slot{width:160px;height:160px;border-radius:20px;overflow:hidden;position:relative;background:#f4f8fd;box-shadow:0 10px 26px -10px rgba(16,70,140,.22);cursor:pointer}
 .video-slot video{width:100%;height:100%;object-fit:cover;display:block}
+.vs-expand{position:absolute;top:8px;right:8px;width:26px;height:26px;border-radius:9px;background:rgba(15,26,43,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);color:#fff;display:flex;align-items:center;justify-content:center;z-index:2;cursor:pointer;transition:background .15s}
+.vs-expand:hover{background:rgba(15,26,43,.78)}
+.theater{display:none;position:fixed;inset:0;background:rgba(10,22,45,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:260;align-items:center;justify-content:center}
+.theater.show{display:flex}
+.th-stage{width:min(92vw,86vh);aspect-ratio:1/1;max-height:92vh}
+.th-stage video{width:100%;height:100%;object-fit:contain;background:#000;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.th-close{position:fixed;top:18px;right:18px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .15s}
+.th-close:hover{background:rgba(255,255,255,.28)}
 
 .hero-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:999px;background:var(--accent-light);color:var(--accent);font-size:.68rem;font-weight:700;letter-spacing:.02em;margin-top:7px}
 .hero-title{font-size:2rem;font-weight:800;line-height:1.32;letter-spacing:.01em;margin-bottom:12px}
@@ -261,6 +269,11 @@ body::after{content:'';position:fixed;bottom:-200px;right:-140px;width:620px;hei
     </div>
     <div class="video-slot" id="videoSlot" onclick="toggleVideoMute()" title="点击播放 / 再点静音">
       <video id="promoVideo" src="promo-ks-s.mp4" poster="poster-ks.jpg" muted loop playsinline preload="none"></video>
+      <span class="vs-expand" onclick="openTheater(event)" title="展开播放"><svg class="icv" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 3h6v6" /><path d="m21 3-7 7" /><path d="m3 21 7-7" /><path d="M9 21H3v-6" /></svg></span>
+    </div>
+    <div class="theater" id="theater" onclick="closeTheater(event)">
+      <div class="th-stage" onclick="event.stopPropagation()"></div>
+      <span class="th-close" onclick="closeTheater(event)" title="收起"><svg class="icv" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></span>
     </div>
     </div>
   </div><div class="mode-grid">
@@ -428,6 +441,9 @@ let DETECT_DATA={"zh":[{"task_platform":"知网_zh","task_name":"aigcmove_tp_s_1
 /*__MODEL_DATA_END__*/
 //宣传视频：src直接写在<video>标签上，preload=none点播（首屏零流量，点击才开始缓冲）；换视频=换文件
 function toggleVideoMute(){var v=document.getElementById('promoVideo');if(v.paused){v.play();return;}v.muted=!v.muted;}
+function openTheater(e){e.stopPropagation();var t=document.getElementById('theater'),v=document.getElementById('promoVideo');if(!v)return;t.classList.add('show');document.querySelector('.th-stage').appendChild(v);v.controls=true;if(v.paused)v.play();}
+function closeTheater(e){if(e)e.stopPropagation();var t=document.getElementById('theater');if(!t.classList.contains('show'))return;t.classList.remove('show');var v=document.getElementById('promoVideo');document.getElementById('videoSlot').appendChild(v);v.controls=false;}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeTheater();});
 function isDetect(){return state.mode==='detect';}
 function currentPlatforms(){if(isDetect())return (DETECT_DATA[state.lang]||[]).map(p=>p.task_platform.replace(/_(zh|en)$/,''));return MODEL_DATA[state.mode][state.lang].platforms;}
 function prettyName(code,name){const M={'zh_jc_1_0325':'降重0325-1','zh_jc_2_0325':'降重0325-2','zh_jc_3_0325':'降重0325-3','zh_jc_4_0325':'降重0325-4','jc_muti_language_1':'超级改写(扩写降重+20%~40%)','aigcmove_tp_s_merge_1':'混合模式','aimove_weipu_0513':'维普专用0513','aimove_weipu_0520':'格子达学校版专用0520','gzd_0510':'格子达个人版0510','wanfang_0731':'万方专用0731','daya':'大雅专用0729','paperpass0618':'PaperPass专用0618','aimove_matrix_s_1':'朱雀专用(小说新闻泛娱乐)','aimove_大雅句子_1':'大雅/YY降AI力度强','aimove_weipu_english':'英文降AI','turnitin_s_1':'Turnitin专用(质量高)','5.09en':'英文双降','aigcmove_wanfang_sj':'万方双降专用','aigcmove_weipu_sj':'维普双降专用','aigcmove_daya_sj':'大雅双降专用','aigcmove_zhuque_sj':'朱雀双降专用','aigcmove_paperpass_sj':'PaperPass双降专用','aigcmove_turnitin_sj':'英语双降0826'};if(M[code])return M[code];let m=name.match(/^降重测试模式0325-(\d)$/);if(m)return'降重0325-'+m[1];m=name.match(/^降ai模式-微度模式(\d)$/);if(m)return'微度模式'+m[1];m=name.match(/^AI移除_260112_(\d)\s*\(/);if(m){const D={'1':'幅度小·学术性强','2':'幅度小·学术性强','3':'能力强·幅度中','4':'能力强·幅度中','5':'很强·幅度大'};return'AI移除_'+m[1]+'('+(D[m[1]]||'')+')';}m=name.match(/^(\d{3,4})-(.+)$/);if(m)return m[2]+m[1];return name;}
