@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✍️ LiSiH 论文降AI
+# ✍️ San降AI
 
 **专业学术文本改写工具 · 降重 · 降AI · 双降**
 
@@ -13,7 +13,7 @@
 
 ## 📋 项目简介
 
-LiSiH 论文降AI 是一款专注于学术文本改写的轻量级工具，支持**降重复率**、**降AI率**、**降重+降AI**三种核心模式，覆盖知网、维普、格子达、Turnitin 等 11 个主流检测平台，内置 29 个专业改写模型。
+San降AI 是一款专注于学术文本改写的轻量级工具，支持**降重复率**、**降AI率**、**降重+降AI**三种核心模式，覆盖知网、维普、格子达、Turnitin 等 11 个主流检测平台，内置 29 个专业改写模型。
 
 ## ✨ 核心功能
 
@@ -125,6 +125,6 @@ MIT License
 
 <div align="center">
 
-**Made with ❤️ by [LiSiH](https://github.com/ImSan3)**
+**Made with ❤️ by [San](https://github.com/ImSan3)**
 
 </div>
