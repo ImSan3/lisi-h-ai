@@ -261,7 +261,7 @@ body::after{content:'';position:fixed;bottom:-200px;right:-140px;width:620px;hei
     </div>
     <div class="video-slot" id="videoSlot" onclick="toggleVideoMute()" title="点击切换声音">
       <div class="vs-ph"><svg class="icv" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></svg><span>宣传视频位</span></div>
-      <video id="promoVideo" muted loop playsinline></video>
+      <video id="promoVideo" poster="poster-ks.jpg" muted loop playsinline></video>
     </div>
     </div>
   </div><div class="mode-grid">
@@ -523,7 +523,7 @@ function closeAdmin(){document.getElementById('adminOverlay').classList.remove('
 const SAVED_API_KEY='sk-qM0mV03sxM7cKYbSmxXXOqGezna7tvHXNbL8x-cp3c8';//一触即改 API Key：只放代码里，别再写回页面输入框
 function getKey(){const el=document.getElementById('apiKey');return (el&&el.value.trim())||SAVED_API_KEY;}
 const VIDEO_RSS='';//视频RSS链接：填入后自动解析里面的mp4
-const VIDEO_DIRECT='';//或直接填mp4地址（RSS拉取失败时兜底）
+const VIDEO_DIRECT='promo-ks.mp4';//已自托管：快手宣传视频（720x720，23秒）
 (function(){const slot=document.getElementById('videoSlot'),v=document.getElementById('promoVideo');const ph=slot.querySelector('.vs-ph');function use(u){if(!u)return;v.src=u;v.style.display='block';ph.style.display='none';v.play().catch(function(){});}
 if(VIDEO_DIRECT){use(VIDEO_DIRECT);return;}
 if(VIDEO_RSS){fetch(VIDEO_RSS).then(function(r){return r.text();}).then(function(t){var m=t.match(/<enclosure[^>]+type="video[^"]*"[^>]+url="([^"]+)"/i)||t.match(/<enclosure[^>]+url="([^"]+)"[^>]+type="video/i)||t.match(/<media:content[^>]+url="([^"]+)"[^>]*media:\s*type="?video/i)||t.match(/<enclosure[^>]+url="([^"]+\.(?:mp4|m4v|mov)[^"]*)"/i);use(m?m[1].replace(/&amp;/g,'&'):'');}).catch(function(){});}})();
