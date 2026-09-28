@@ -63,8 +63,8 @@ body::after{content:'';position:fixed;bottom:-200px;right:-140px;width:620px;hei
 .hero-brand img{width:68px;height:68px;border-radius:18px;object-fit:cover}
 .hero-brand .hb-name{font-size:1.55rem;font-weight:800;color:var(--text);letter-spacing:.01em}
 .hero-side{display:flex;flex-direction:row-reverse;align-items:center;gap:24px;flex:none}
-.video-slot{width:160px;height:160px;border-radius:20px;overflow:hidden;position:relative;background:#f4f8fd;box-shadow:0 10px 26px -10px rgba(16,70,140,.22);cursor:pointer}
-.video-slot video{width:100%;height:100%;object-fit:cover;display:block}
+.video-slot{width:160px;height:160px;border-radius:20px;overflow:hidden;position:relative;background:#f4f8fd;box-shadow:0 10px 26px -10px rgba(16,70,140,.22)}
+.video-slot iframe{width:100%;height:100%;border:0;display:block}
 
 .hero-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:999px;background:var(--accent-light);color:var(--accent);font-size:.68rem;font-weight:700;letter-spacing:.02em;margin-top:7px}
 .hero-title{font-size:2rem;font-weight:800;line-height:1.32;letter-spacing:.01em;margin-bottom:12px}
@@ -259,8 +259,8 @@ body::after{content:'';position:fixed;bottom:-200px;right:-140px;width:620px;hei
         <div class="hero-badge"><svg class="icv" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /><path d="M20 2v4" /><path d="M22 4h-4" /><circle cx="4" cy="20" r="2" /></svg> 自研算法 · 一键改写</div>
       </div>
     </div>
-    <div class="video-slot" id="videoSlot" onclick="toggleVideoMute()" title="点击切换声音">
-      <video id="promoVideo" src="promo-ks-s.mp4" poster="poster-ks.jpg" muted loop playsinline preload="none"></video>
+    <div class="video-slot" id="videoSlot">
+      <iframe src="https://player.bilibili.com/player.html?bvid=BV1Bca56DECL&page=1&high_quality=1&danmaku=0&autoplay=0" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy"></iframe>
     </div>
     </div>
   </div><div class="mode-grid">
@@ -521,8 +521,7 @@ function closeAdmin(){document.getElementById('adminOverlay').classList.remove('
 
 const SAVED_API_KEY='sk-qM0mV03sxM7cKYbSmxXXOqGezna7tvHXNbL8x-cp3c8';//一触即改 API Key：只放代码里，别再写回页面输入框
 function getKey(){const el=document.getElementById('apiKey');return (el&&el.value.trim())||SAVED_API_KEY;}
-//宣传视频：src直接写在<video>标签上，preload=none点播（首屏零流量，点击才开始缓冲）；换视频=换文件
-function toggleVideoMute(){var v=document.getElementById('promoVideo');if(v.paused){v.play();return;}v.muted=!v.muted;}
+
 
 async function doRewrite(){const key=getKey();if(!key)return showToast('系统错误');const text=document.getElementById('inputText').value.trim();if(!text||text.length<5)return showToast('至少5个字');if(!state.model)return showToast('请选择模型');const btn=document.getElementById('btnSubmit'),bt=document.getElementById('btnText');btn.classList.add('loading');btn.disabled=true;bt.textContent='改写中…';try{const r=await fetch(`${API}/api/v2/paraphrase`,{method:'POST',headers:{'Content-Type':'application/json','Authorization':key},body:JSON.stringify({text,preset:state.model.trim()})});const d=await r.json();if(r.ok&&(d.success||d.result||d.data)){const res=d.paraphrased_text||d.result||d.data?.result||d.data?.text||d.text;if(res){showResult(text,res,d);}else{document.getElementById('resultArea').innerHTML=`<div class="result-content" style="color:var(--danger)">${escHtml(JSON.stringify(d,null,2))}</div>`;document.getElementById('resultFooter').style.display='flex';showToast('返回格式异常');}}else{showToast(d.detail||d.message||'改写失败');}}catch(e){showToast('请求失败: '+e.message);}finally{btn.classList.remove('loading');btn.disabled=false;bt.textContent='一键改写';}}
 
