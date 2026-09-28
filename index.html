@@ -82,7 +82,7 @@ body::after{content:'';position:fixed;bottom:-200px;right:-140px;width:620px;hei
 
 /* Selection Panel */
 .panel{background:#f4f8fd;border:1px solid transparent;border-radius:20px;padding:24px 26px;margin-bottom:22px}
-.panel-row{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.panel-row{display:flex;align-items:center;gap:14px;margin-bottom:18px}.panel-row:first-child{padding-bottom:16px;border-bottom:1px solid #e4ecf6}
 .panel-row:last-child{margin-bottom:0}
 .panel-label{font-size:.78rem;font-weight:600;color:var(--text2);min-width:76px;white-space:nowrap}
 .tag-group{display:flex;gap:9px;flex-wrap:wrap}
@@ -234,7 +234,7 @@ body::after{content:'';position:fixed;bottom:-200px;right:-140px;width:620px;hei
 
 /* Responsive */
 @media(max-width:900px){.mode-grid{grid-template-columns:repeat(2,1fr)}.editor-wrap{grid-template-columns:1fr}.page{margin:18px 16px 44px;padding:26px 20px 34px;border-radius:26px}.hero-title{font-size:1.5rem}}
-@media(max-width:600px){html{font-size:13px}.mode-grid{grid-template-columns:1fr 1fr;gap:10px}.mode-card{padding:15px 13px}.mode-card .mc-desc{display:none}.page{margin:14px 12px 36px;padding:22px 16px 30px;border-radius:24px}.hero{margin-bottom:24px}.hero-title{font-size:1.32rem}.hero-sub{font-size:.8rem}.verify-input{font-size:1.1rem;letter-spacing:8px}.cc-top{flex-wrap:wrap}.hero{flex-direction:column-reverse;gap:18px;margin-bottom:26px}}
+@media(max-width:600px){html{font-size:13px}.mode-grid{grid-template-columns:1fr 1fr;gap:10px}.mode-card{padding:15px 13px}.mode-card .mc-desc{display:none}.page{margin:14px 12px 36px;padding:22px 16px 30px;border-radius:24px}.hero{margin-bottom:24px}.hero-title{font-size:1.32rem}.hero-sub{font-size:.8rem}.verify-input{font-size:1.1rem;letter-spacing:8px}.cc-top{flex-wrap:wrap}.hero{position:relative;flex-direction:column-reverse;gap:16px;margin-bottom:24px}.hero-brand{margin-top:0;margin-right:0}.hero-brand img{width:54px;height:54px;border-radius:15px}.hero-brand .hb-name{font-size:1.35rem}.hero-badge{font-size:.68rem;padding:5px 13px}.hero-main .hero-badge{position:absolute;top:2px;right:0}.panel{padding:20px 18px}.panel-row{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:16px}.panel-row:first-child{padding-bottom:14px}.panel-label{min-width:0}.model-select-wrap{min-width:0;width:100%}}
 </style>
 </head>
 <body>
